@@ -1,6 +1,6 @@
 {
   "name": "react-native-awake",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "keeps your screen awake",
   "source": "./src/index.tsx",
   "main": "./lib/module/index.js",
