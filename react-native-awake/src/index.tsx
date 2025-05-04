@@ -1,5 +1,17 @@
-import Awake from './NativeAwake';
+import { useEffect } from 'react';
+import AwakeModule from './NativeAwake';
 
-export function multiply(a: number, b: number): number {
-  return Awake.multiply(a, b);
-}
+/**
+ * React Native Awake library
+ * Prevents the device screen from going to sleep
+ */
+export const useAwake = () => {
+  useEffect(() => {
+    console.log('AwakeModule.awakeOn()');
+    AwakeModule.awakeOn();
+    return () => {
+      console.log('AwakeModule.awakeOff()');
+      AwakeModule.awakeOff();
+    };
+  }, []);
+};

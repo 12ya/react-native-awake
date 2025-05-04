@@ -1,6 +1,5 @@
 const path = require('path');
 const { getDefaultConfig } = require('@react-native/metro-config');
-const { getConfig } = require('react-native-builder-bob/metro-config');
 
 const root = path.resolve(__dirname, '..');
 
@@ -10,7 +9,20 @@ const root = path.resolve(__dirname, '..');
  *
  * @type {import('metro-config').MetroConfig}
  */
-module.exports = getConfig(getDefaultConfig(__dirname), {
-  root,
-  project: __dirname,
-});
+const config = getDefaultConfig(__dirname);
+
+// Add the additional node_modules folders
+config.resolver.nodeModulesPaths = [
+  path.resolve(__dirname, 'node_modules'),
+  path.resolve(root, 'node_modules'),
+];
+
+// Add the additional watchFolders
+config.watchFolders = [root];
+
+// Add extra modules to resolver
+config.resolver.extraNodeModules = {
+  'react-native-awake': root,
+};
+
+module.exports = config;

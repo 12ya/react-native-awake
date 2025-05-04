@@ -79,8 +79,7 @@
     "prettier": "^3.0.3",
     "react": "19.0.0",
     "react-native": "0.78.2",
-    "react-native-builder-bob": "^0.40.7",
-    "react-native-monorepo-config": "^0.1.7",
+    "react-native-builder-bob": "^0.40.8",
     "release-it": "^17.10.0",
     "turbo": "^1.10.7",
     "typescript": "^5.2.2"
@@ -160,6 +159,6 @@
   "create-react-native-library": {
     "languages": "kotlin-objc",
     "type": "turbo-module",
-    "version": "0.49.10"
+    "version": "0.50.1"
   }
 }

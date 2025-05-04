@@ -1,12 +1,12 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-awake';
-
-const result = multiply(3, 7);
+import { useAwake } from 'react-native-awake';
 
 export default function App() {
+  useAwake();
+
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text style={styles.title}>React Native Awake</Text>
     </View>
   );
 }
@@ -16,5 +16,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
   },
 });

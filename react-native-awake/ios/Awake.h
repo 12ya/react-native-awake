@@ -1,5 +1,4 @@
-#import <AwakeSpec/AwakeSpec.h>
+#import <React/RCTBridgeModule.h>
 
-@interface Awake : NSObject <NativeAwakeSpec>
-
+@interface Awake : NSObject <RCTBridgeModule>
 @end
