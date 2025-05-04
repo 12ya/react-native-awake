@@ -10,13 +10,16 @@ npm install react-native-awake
 
 ## Usage
 
+just call inside of component that you want to keep awake
 
 ```js
-import { multiply } from 'react-native-awake';
+import { useAwake } from 'react-native-awake';
 
 // ...
-
-const result = multiply(3, 7);
+/**
+ * useAwake hook will keep the screen awake for the duration of the component's lifecycle
+ */
+useAwake();
 ```
 
 
