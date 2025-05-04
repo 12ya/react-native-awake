@@ -7,6 +7,7 @@
   "types": "./lib/typescript/src/index.d.ts",
   "exports": {
     ".": {
+      "source": "./src/index.tsx",
       "types": "./lib/typescript/src/index.d.ts",
       "default": "./lib/module/index.js"
     },
@@ -55,6 +56,14 @@
     "url": "https://github.com/12ya/react-native-awake/issues"
   },
   "homepage": "https://github.com/12ya/react-native-awake#readme",
+  "codegenConfig": {
+    "name": "AwakeModuleSpec",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.awake"
+    }
+  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -79,7 +88,7 @@
     "prettier": "^3.0.3",
     "react": "19.0.0",
     "react-native": "0.78.2",
-    "react-native-builder-bob": "^0.40.8",
+    "react-native-builder-bob": "^0.40.9",
     "release-it": "^17.10.0",
     "turbo": "^1.10.7",
     "typescript": "^5.2.2"
@@ -140,25 +149,16 @@
           "esm": true
         }
       ],
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
-  },
-  "codegenConfig": {
-    "name": "AwakeSpec",
-    "type": "modules",
-    "jsSrcsDir": "src",
-    "android": {
-      "javaPackageName": "com.awake"
-    }
   },
   "create-react-native-library": {
     "languages": "kotlin-objc",
     "type": "turbo-module",
     "version": "0.50.1"
-  }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ]
 }
