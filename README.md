@@ -1,6 +1,7 @@
 # react-native-awake
 
-keeps your screen awake
+keeps your screen awake ![ChatGPT Image May 17, 2025, 08_13_36 PM](https://github.com/user-attachments/assets/58ee7566-2a1e-420e-a8be-bc0e581bcba9)
+
 
 ## Installation
 
